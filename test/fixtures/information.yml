@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  began: 2020-02-15
+  ended: 2020-02-15
+  validation: MyString
+  dead: 1
+  displaced: 1
+  maincause: MyString
+  country: one
+
+two:
+  began: 2020-02-15
+  ended: 2020-02-15
+  validation: MyString
+  dead: 1
+  displaced: 1
+  maincause: MyString
+  country: two

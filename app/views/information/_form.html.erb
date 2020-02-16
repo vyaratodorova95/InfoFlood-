@@ -1,0 +1,52 @@
+<%= form_with(model: information, local: true) do |form| %>
+  <% if information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(information.errors.count, "error") %> prohibited this information from being saved:</h2>
+
+      <ul>
+        <% information.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :began %>
+    <%= form.date_select :began %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ended %>
+    <%= form.date_select :ended %>
+  </div>
+
+  <div class="field">
+    <%= form.label :validation %>
+    <%= form.text_field :validation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dead %>
+    <%= form.number_field :dead %>
+  </div>
+
+  <div class="field">
+    <%= form.label :displaced %>
+    <%= form.number_field :displaced %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maincause %>
+    <%= form.text_field :maincause %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.collection_select( :country_id, @country,:id, :name ) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

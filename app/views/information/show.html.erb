@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Began:</strong>
+  <%= @information.began %>
+</p>
+
+<p>
+  <strong>Ended:</strong>
+  <%= @information.ended %>
+</p>
+
+<p>
+  <strong>Validation:</strong>
+  <%= @information.validation %>
+</p>
+
+<p>
+  <strong>Dead:</strong>
+  <%= @information.dead %>
+</p>
+
+<p>
+  <strong>Displaced:</strong>
+  <%= @information.displaced %>
+</p>
+
+<p>
+  <strong>Maincause:</strong>
+  <%= @information.maincause %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @information.country.name %>
+</p>
+
+<%= link_to 'Edit', edit_information_path(@information) %> |
+<%= link_to 'Back', information_index_path %>
