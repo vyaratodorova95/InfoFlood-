@@ -6,13 +6,15 @@ namespace :country do
     #drop the old table data before importing the new stuff
     Country.destroy_all
 
-    CSV.foreach("lib/assets/Country1.csv", :headers =>true) do |row |
-      puts row.inspect #just so that we know the file's being read
+    CSV.foreach("lib/assets/global-archive-of-flood-events-xls-1.csv", :headers =>true) do |row |
+      # puts row.inspect #just so that we know the file's being read
 
-      #create new model instances with the data
-      Country.create!(
-      name: row[0]
-    )
+      if !Country.exists?(name: row[2])
+        #create new model instances with the data
+        Country.create!(
+        name: row[2]
+        )
+      end
     end
   end
   
@@ -21,18 +23,48 @@ namespace :country do
     #drop the old table data before importing the new stuff
     Location.destroy_all
 
-    CSV.foreach("lib/assets/TEST.csv", :headers =>true) do |row |
-      puts row.inspect #just so that we know the file's being read
+    CSV.foreach("lib/assets/global-archive-of-flood-events-xls-1.csv", :headers =>true) do |row |
+      # puts row.inspect #just so that we know the file's being read
+      country_name = row[2]
+       
 
-      #create new model instances with the data
-      Location.create!(
-      country_id: row[0].to_i,
-      long: row[1].to_d,
-      lat: row[2].to_d,
-      area: row[3].to_d
-    
-    )
-    end
+        # puts "country_temp: " + country_temp
+        country = Country.where(["name = ?", country_name]).first
+        Location.create!(
+        
+        country_id: country.id,
+        long: row[4].to_d,
+        lat: row[5].to_d,
+        area: row[6].to_d
+        )
+   end
+
   end
+  
+  task seed_information: :environment do
 
+    #drop the old table data before importing the new stuff
+    Information.destroy_all
+
+    CSV.foreach("lib/assets/global-archive-of-flood-events-xls-1.csv", :headers =>true) do |row |
+      # puts row.inspect #just so that we know the file's being read
+      country_name = row[2]
+       
+
+        # puts "country_temp: " + country_temp
+        country = Country.where(["name = ?", country_name]).first
+        Information.create!(
+        country_id: country.id,
+        began: row[7],
+        ended: row[8],
+        validation: row[9],
+        dead: row[10],
+        displaced: row[11],
+        maincause: row[12]
+        )
+   end
 end
+end
+
+  
+
