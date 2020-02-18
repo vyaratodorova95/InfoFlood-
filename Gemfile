@@ -8,7 +8,6 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'pg', '1.1.4'
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
@@ -23,7 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
- 
+gem 'bootstrap', '~> 4.4.1'
+gem 'pg', '~> 1.1.4'
 
 
 # Use Active Storage variant
@@ -33,7 +33,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -47,7 +47,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '1.1.4'
+  gem 'pg','~> 1.1.4'
 end
 
 group :test do
