@@ -1,33 +1,194 @@
-<p id="notice"><%= notice %></p>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <center><p class="highcharts-description">
+        This chart displays 20 countries and represents the number of locations affected by floods within them.
+        The X axis represents the number of locations affected and the Y axis represents the countries.
+    </p>
+    </center>
+</figure>
+<div style="height: 50px;"></div>
 
-<h1>Location</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Long</th>
-      <th>Lat</th>
-      <th>Area</th>
-      <th>Country</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<figure class="highcharts-figure">
+   <div id="container2" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto;"></div>
+   <center><p class="highcharts-description">
+        This chart displays the Top 5 countries which recorded the highest number of floods.
+    </p>
+   </center>
+</figure>
 
-  <tbody>
-    <% @location.each do |location| %>
-      <tr>
-        <td><%= location.long %></td>
-        <td><%= location.lat %></td>
-        <td><%= location.area %></td>
-        <td><%= location.country.name %></td>
-        <td><%= link_to 'Show', location %></td>
-        <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div style="height: 50px;"></div>
 
-<br>
+<figure class="highcharts-figure">
+   <div id="container3" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto;"></div>
+   <center><p class="highcharts-description">
+        This chart displays the Top 10 safest countries which recorded the least number of floods.
+    </p>
+   </center>
+</figure>
+ 
+<script type="text/javascript">
+$(function () {
+var myChart = Highcharts.chart('container',{
+chart: {
+type: 'column'
+},
+title: {
+text: 'Locations affected by floods'
+},
+xAxis: {
+max: 20,    
+title: {
+text: 'Countries'
+},
+categories:  <%= raw @country_names %>
+},
+yAxis: {
+title: {
+text: 'Number of locations'
+},
+   tickInterval: 100
+},
 
-<%= link_to 'New Location', new_location_path %>
+tooltip: {
+        headerFormat: '<span style="font-size:14px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+series: [{
+ 
+
+name: 'Locations affected by floods',
+data: <%= raw @locations %>
+}]
+});
+});
+
+
+
+// Build the chart
+var pieColors = (function () {
+  var colors = [],
+    base = Highcharts.getOptions().colors[0],
+    i;
+
+  for (i = 0; i < 10; i += 1) {
+    // Start out with a darkened base color (negative brighten), and end
+    // up with a much brighter color
+    colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+  }
+  return colors;
+}());
+
+
+Highcharts.chart('container2', {
+  chart: {
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+  },
+ 
+  title: {
+    text: 'Top 5 countries most affected by floods'
+  },
+  tooltip: {
+    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  plotOptions: {
+    pie: {
+      allowPointSelect: true,
+      cursor: 'pointer',
+      colors: pieColors,
+      dataLabels: {
+      enabled: false
+      },
+      showInLegend: true
+    }
+  },
+  series: [{
+    name: 'Percentage',
+    colorByPoint: true,
+    data: [{
+      name: 'USA',
+      y: 33.26,
+      sliced: true,
+      selected: true
+    }, {
+      name: 'Philippines',
+      y: 12.22
+    }, {
+      name: 'India',
+      y: 17.24
+    }, {
+      name: 'Indonesia',
+      y: 13.97
+    }, {
+      name: 'China',
+      y: 23.28
+    }]
+  }]
+});
+
+// Build the chart
+Highcharts.chart('container3', {
+    chart: {
+        type: 'pie',
+        options3d: {
+            enabled: true,
+            alpha: 45
+        }
+    },
+     "colors": [
+    "#90caf9",
+    "#42a5f5",
+    "#3f51b5",
+    "#1a237e",
+    "#4db6ac",
+    "#009688",
+    "#00695c",
+    "#004d40",
+    "#304ffe",
+    "#00b0ff"
+  ],
+    title: {
+        text:  'Top 10 countries least affected by floods'
+
+    },
+    plotOptions: {
+        pie: {
+            innerSize: 100,
+            depth: 45
+        }
+    },
+    series: [{
+        name: 'No. of floods',
+        data: [
+            ['Libya', 1],
+            ['Lithuania', 1],
+            ['Latvia', 1],
+            ['Bahamas', 1],
+            ['Bermuda', 1],
+            ['Canary Islands', 1],
+            ['Caribbean', 1],
+            ['Finland', 1],
+            ['Iceland', 1],
+            ['Estonia', 1],            
+        ]
+    }]
+});
+</script>

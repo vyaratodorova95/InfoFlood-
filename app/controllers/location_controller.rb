@@ -6,7 +6,22 @@ class LocationController < ApplicationController
   # GET /location.json
   def index
     @location = Location.all
+     @country = Country.all
+    @location_names = []
+    @country_names = []
+ 
+    @country.each do |country|
+      @country_names << country.name
+    end
+
+    @location_groups = Location.all.group('country_id').count('id')
+
+     @locations = []
+     @location_groups.each do |group|
+     @locations << group[1]
+   end
   end
+
 
   # GET /location/1
   # GET /location/1.json
