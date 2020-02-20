@@ -1,8 +1,7 @@
 require 'csv'
 namespace :country do
-  desc "pull country data into database"
+  desc "TODO"
   task seed_country: :environment do
-
     #drop the old table data before importing the new stuff
     Country.destroy_all
 
@@ -16,9 +15,9 @@ namespace :country do
         )
       end
     end
-  end
-  
-   task seed_location: :environment do
+end
+
+ task seed_location: :environment do
 
     #drop the old table data before importing the new stuff
     Location.destroy_all
@@ -40,7 +39,6 @@ namespace :country do
    end
 
   end
-  
   task seed_information: :environment do
 
     #drop the old table data before importing the new stuff
@@ -65,6 +63,3 @@ namespace :country do
    end
 end
 end
-
-  
-
