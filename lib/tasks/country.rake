@@ -62,4 +62,30 @@ end
         )
    end
 end
+
+task seed_search: :environment do
+
+    #drop the old table data before importing the new stuff
+    Search.destroy_all
+
+    CSV.foreach("lib/assets/global-archive-of-flood-events-xls-1.csv", :headers =>true) do |row |
+      # puts row.inspect #just so that we know the file's being read
+      country_name = row[2]
+       
+
+        # puts "country_temp: " + country_temp
+        country = Country.where(["name = ?", country_name]).first
+        Search.create!(
+        country_id: country.id,
+        long: row[4],
+        lat: row[5],
+        area: row[6],
+        began: row[7],
+        ended: row[8],
+        dead: row[10],
+        displaced: row[11],
+        maincause: row[12]
+        )
+   end
+end
 end

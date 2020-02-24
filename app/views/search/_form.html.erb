@@ -1,15 +1,30 @@
-<%= form_with(model: information, local: true) do |form| %>
-  <% if information.errors.any? %>
+<%= form_with(model: search, local: true) do |form| %>
+  <% if search.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(information.errors.count, "error") %> prohibited this information from being saved:</h2>
+      <h2><%= pluralize(search.errors.count, "error") %> prohibited this search from being saved:</h2>
 
       <ul>
-        <% information.errors.full_messages.each do |message| %>
+        <% search.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
+
+  <div class="field">
+    <%= form.label :long %>
+    <%= form.text_field :long %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :area %>
+    <%= form.number_field :area %>
+  </div>
 
   <div class="field">
     <%= form.label :began %>
@@ -19,11 +34,6 @@
   <div class="field">
     <%= form.label :ended %>
     <%= form.date_select :ended %>
-  </div>
-
-  <div class="field">
-    <%= form.label :validation %>
-    <%= form.text_field :validation %>
   </div>
 
   <div class="field">
@@ -43,7 +53,7 @@
 
   <div class="field">
     <%= form.label :country_id %>
-    <%= form.collection_select( :country_id, @country,:id, :name ) %>
+    <%= form.text_field :country_id %>
   </div>
 
   <div class="actions">
