@@ -1,9 +1,11 @@
-class CreateInformation < ActiveRecord::Migration[6.0]
+class CreateSearch < ActiveRecord::Migration[6.0]
   def change
-    create_table :information do |t|
+    create_table :search do |t|
+      t.decimal :long
+      t.decimal :lat
+      t.integer :area
       t.date :began
       t.date :ended
-      t.string :validation
       t.integer :dead
       t.integer :displaced
       t.string :maincause

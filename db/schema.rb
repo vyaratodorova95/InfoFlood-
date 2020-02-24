@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_15_130358) do
+ActiveRecord::Schema.define(version: 2020_02_23_173216) do
 
   create_table "country", force: :cascade do |t|
     t.string "name"
@@ -41,6 +41,22 @@ ActiveRecord::Schema.define(version: 2020_02_15_130358) do
     t.index ["country_id"], name: "index_location_on_country_id"
   end
 
+  create_table "search", force: :cascade do |t|
+    t.decimal "long"
+    t.decimal "lat"
+    t.integer "area"
+    t.date "began"
+    t.date "ended"
+    t.integer "dead"
+    t.integer "displaced"
+    t.string "maincause"
+    t.integer "country_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["country_id"], name: "index_search_on_country_id"
+  end
+
   add_foreign_key "information", "country"
   add_foreign_key "location", "country"
+  add_foreign_key "search", "country"
 end

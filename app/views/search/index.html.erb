@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Search</h1>
+
+<%= form_tag(search_index_path, method: :get) do %>
+<%= text_field_tag :term, params[:term] %>
+<%= submit_tag 'Search' %>
+<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>Area</th>
+      <th>Began</th>
+      <th>Ended</th>
+      <th>Dead</th>
+      <th>Displaced</th>
+      <th>Maincause</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @search.each do |search| %>
+      <tr>
+        <td><%= search.long %></td>
+        <td><%= search.lat %></td>
+        <td><%= search.area %></td>
+        <td><%= search.began %></td>
+        <td><%= search.ended %></td>
+        <td><%= search.dead %></td>
+        <td><%= search.displaced %></td>
+        <td><%= search.maincause %></td>
+        <td><%= search.country.name %></td>
+        <td><%= link_to 'Show', search %></td>
+        <td><%= link_to 'Edit', edit_search_path(search) %></td>
+        <td><%= link_to 'Destroy', search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Search', new_search_path %>

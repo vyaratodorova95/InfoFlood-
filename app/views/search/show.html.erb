@@ -1,0 +1,98 @@
+<script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+ 
+<center>
+<div id='map' style='width: 400px; height: 300px;'></div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1Ijoic25lc2hlYiIsImEiOiJjazZ0eWI2bWgwM3djM3RtczB6Zm1hajA1In0.3puNkWvosmAZdTYx2-ACcQ';
+var map = L.mapbox.map('map')
+    .setView([<%= @search.lat %>, <%= @search.long %>], 5)
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11'));
+    var marker = L.marker([<%= @search.lat %>, <%= @search.long %>]).addTo(map);   
+    
+</script>
+<p id="notice"><%= notice %></p>
+
+<table border="1">
+    <thead>
+    <tr>
+      <th>Long</th>
+      <th>Lat</th>
+      <th>Area</th>
+      <th>Began</th>
+      <th>Ended</th>
+      <th>Dead</th>
+      <th>Displaced</th>
+      <th>Maincause</th>
+      <th>Country</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>
+      <p>
+        <%= @search.long %>
+      </p>
+      
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.lat %>
+      </p>
+    </td>
+    
+     <td>
+     <p>
+      <%= @search.area %>
+      </p>
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.began %>
+      </p>
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.ended %>
+      </p>
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.dead %>
+      </p>
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.displaced %>
+      </p>
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.maincause %>
+      </p>
+    </td>
+    
+    <td>
+     <p>
+      <%= @search.country.name %>
+      </p>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+ 
+
+
+<!--<%= link_to 'Edit', edit_search_path(@search) %> |-->
+<%= link_to 'Back', search_index_path %>
