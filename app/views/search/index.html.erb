@@ -9,8 +9,10 @@
 <table>
   <thead>
     <tr>
-   
+      
+      <th>Date began</th>
       <th>Country</th>
+      <th>Main cause</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +20,9 @@
   <tbody>
     <% @search.each do |search| %>
       <tr>
-     
+        <td><%= search.began %></td>
         <td><%= search.country.name %></td>
+        <td><%= search.maincause %></td>
         <td><%= link_to 'Show', search %></td>
         <td><%= link_to 'Edit', edit_search_path(search) %></td>
         <td><%= link_to 'Destroy', search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,4 +34,4 @@
 <br>
 <%= will_paginate @search %>
 
-<%= link_to 'New Search', new_search_path %>
+
