@@ -2,11 +2,6 @@ class CountryController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :redirect_if_not_found
   
-  def api
-    @countries = Country.all
-    render json: @countries
-  end
-  
 
   # GET /country
   # GET /country.json

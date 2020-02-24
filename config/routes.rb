@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'about/index'
-  resources :information
+  resources :search
   resources :location
   resources :country
   get 'info_flood/index'
