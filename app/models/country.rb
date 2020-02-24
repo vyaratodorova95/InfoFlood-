@@ -1,4 +1,4 @@
 class Country < ApplicationRecord
- has_one :location
+ has_one :search
 end
 
