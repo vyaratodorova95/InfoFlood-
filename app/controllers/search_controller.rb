@@ -5,7 +5,7 @@ class SearchController < ApplicationController
   # GET /search.json
   
   def index
-    @search = Search.search(params[:term])
+    @search = Search.search(params[:term]).paginate(page: params[:page])
     
   end
 
