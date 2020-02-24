@@ -2,7 +2,7 @@
 <link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
  
 <center>
-<div id='map' style='width: 400px; height: 300px;'></div>
+<div id='map' style='width: 720px; height: 560px; margin: 20px;'></div>
 
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic25lc2hlYiIsImEiOiJjazZ0eWI2bWgwM3djM3RtczB6Zm1hajA1In0.3puNkWvosmAZdTYx2-ACcQ';
@@ -14,8 +14,8 @@ var map = L.mapbox.map('map')
 </script>
 <p id="notice"><%= notice %></p>
 
-<table border="1">
-    <thead>
+<table border="1" class="table table-bordered" style="margin-top:30px;">
+    <thead class="thead-dark">
     <tr>
       <th>Long</th>
       <th>Lat</th>
@@ -89,10 +89,9 @@ var map = L.mapbox.map('map')
   </tbody>
 </table>
 
-
-
- 
-
-
 <!--<%= link_to 'Edit', edit_search_path(@search) %> |-->
-<%= link_to 'Back', search_index_path %>
+
+<li class="nav-item">
+        <a type="button" class="btn btn-outline-primary" style="margin-left:45%;"<%= link_to 'Back', search_index_path %></a>
+</li>
+
