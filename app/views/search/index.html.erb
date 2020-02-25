@@ -1,16 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Search</h1>
+<h1 style="align:center; margin:10px; font-family:Rockwell;">Search</h1>
 
-<%= form_tag(search_index_path, method: :get) do %>
-<%= text_field_tag :term, params[:term] %>
-<%= submit_tag 'Search' %>
+
+ <form class="form-inline my-2 my-lg-0" >
+       <div class="col-sm-10" style="align:center;">
+      <%= form_tag(search_index_path, method: :get) do %>
+      <%= text_field_tag :term, params[:term] %>
+      <%= submit_tag 'Search' %>
+    </div>
+ </form>
+
+
 <% end %>
-<table>
-  <thead>
-    <tr>
-   
+<table class="table table-bordered" style="margin-top:30px;">
+  <thead class="thead-dark">
+    <tr>     
+     <th>Date began</th>
       <th>Country</th>
+      <th>Main cause</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,17 +26,22 @@
   <tbody>
     <% @search.each do |search| %>
       <tr>
-     
+        <td><%= search.began %></td>
         <td><%= search.country.name %></td>
+        <td><%= search.maincause %></td>
         <td><%= link_to 'Show', search %></td>
-        <td><%= link_to 'Edit', edit_search_path(search) %></td>
-        <td><%= link_to 'Destroy', search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<%= link_to 'Display Country data', jsondata_index_path %>
 <br>
+<hr>
+
 <%= will_paginate @search %>
 
-<%= link_to 'New Search', new_search_path %>
+
+<li class="nav-item">
+        <a type="button" class="btn btn-outline-primary" style="margin-left:45%;"<%= link_to 'New Search', new_search_path %></a>
+</li>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'jsondata/index'
   resources :search
   resources :location
   resources :country
