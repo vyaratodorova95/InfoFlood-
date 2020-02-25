@@ -1,6 +1,7 @@
 class CountryController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :redirect_if_not_found
+  
 
   # GET /country
   # GET /country.json
@@ -70,6 +71,7 @@ class CountryController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def country_params
-      params.require(:country).permit(:name)
-    end
+    params.require(:country).permit(:name) 
+   end
+  
 end

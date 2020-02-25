@@ -15,9 +15,10 @@
 <% end %>
 <table class="table table-bordered" style="margin-top:30px;">
   <thead class="thead-dark">
-    <tr>
-   
-     <th>Country</th>
+    <tr>     
+     <th>Date began</th>
+      <th>Country</th>
+      <th>Main cause</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,8 +26,9 @@
   <tbody>
     <% @search.each do |search| %>
       <tr>
-     
+        <td><%= search.began %></td>
         <td><%= search.country.name %></td>
+        <td><%= search.maincause %></td>
         <td><%= link_to 'Show', search %></td>
         <td><%= link_to 'Edit', edit_search_path(search) %></td>
         <td><%= link_to 'Destroy', search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -44,4 +46,3 @@
 <li class="nav-item">
         <a type="button" class="btn btn-outline-primary" style="margin-left:45%;"<%= link_to 'New Search', new_search_path %></a>
 </li>
-

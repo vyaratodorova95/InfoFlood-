@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 
+
 import Highcharts from 'highcharts';
 window.Highcharts = Highcharts;
 
