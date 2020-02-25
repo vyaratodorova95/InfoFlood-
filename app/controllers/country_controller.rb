@@ -7,6 +7,7 @@ class CountryController < ApplicationController
   # GET /country.json
   def index
     @country = Country.all
+    
   end
 
   # GET /country/1
@@ -62,7 +63,7 @@ class CountryController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_country
