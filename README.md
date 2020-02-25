@@ -21,8 +21,8 @@ Things you may want to cover:
     gem 'bootstrap', '~> 4.4.1'
     gem 'turbolinks', '~> 5'
     gem 'jbuilder', '~> 2.7'
-    # gem 'redis', '~> 4.0'
-    # gem 'bcrypt', '~> 3.1.7'
+    (not necessary) gem 'redis', '~> 4.0'
+    (not necessary) gem 'bcrypt', '~> 3.1.7'
     
     gem 'bootsnap', '>= 1.4.2', require: false
     
@@ -48,7 +48,7 @@ Things you may want to cover:
   1.	rails new InfoFlood 
   2.	rails generate controller infoflood index
   3.  Before running rails server, it’s necessary on some systems (including the cloud IDE) to allow connections to the local web server. To enable this, you should navigate to the file config/environments/development.rb and paste in the two extra lines shown
-# Allow connections to local server.
+  #Allow connections to local server.
     config.hosts.clear
   4.	Open infoflood/config/routes.rb in your editor. Stop the rails server if you have it running so that changes to the routes file take effect.
     root 'infoflood/index'
