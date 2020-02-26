@@ -1,5 +1,5 @@
 # Global Flood information - InfoFlood :ocean::house:
-###### *Developed by - @JoaoCruz20, @Sneha-Sabu, @vyaraodorova95*
+###### *Developed by - @JoaoCruz20 - Student ID: 51986649, @Sneha-Sabu - Student ID: 51987943, @vyaraodorova95 - Student ID: 51987027*
 ### About the application:
 This is a Ruby on Rails application based on an open source dataset representing a Global archive of Flood information found on https://data.world/hdx/0cbe9bb4-edda-4ddf-b82f-c5a0f712c236.
 The spreadsheet of the dataset needed to be imported into the application using a Parsing method explained in detail at https://github.com/scharlau/parsing which was a guiding tool to parse the CSV of the dataset. This application uses the rake command to import the dataset into the database since it can process large records of data at once. </p>
@@ -135,5 +135,5 @@ Then add above it:\
 
 
 
-*InfoFlood 2020 © Copyright*
-*Under Terms and Agreemments of University of Aberdeen and Software distrubution*
+**InfoFlood 2020 © Copyright**
+**Under Terms and Agreements of University of Aberdeen and Software distrubution**
