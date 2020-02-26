@@ -3,7 +3,7 @@ class Search < ApplicationRecord
   
   def self.search(term)
     if term
-      joins(:country).where('country.name LIKE ?',"%#{term}%")
+      where("country.name LIKE ?","%#{term}%")
     else
       all
     end
