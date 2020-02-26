@@ -133,6 +133,55 @@ Then add above it:\
 
 #### Deployment instructions
 
+#### Github Setup Instructions
+
+1. Create a repository for your project on Github
+2. Upload the project to the repository created
+3. Send invitations to collaborators to join your project repository 
+4. cd your project
+5. copy the link of your GitHub repository 
+6. run git clone url repository to make a copy of the project repository
+7. git branch name – to create a working branch
+8. git pull – to update working branch before making changes 
+9. git add -A  to add all changes made 
+10. git commit -m “comment”- to commit it 
+11. git push - to push the change from working branch to master branch
+12. open GitHub and create a pull request
+13. review changes and merge it 
+ 
+#### To update your working branch, you need to follow these steps:
+
+1. git checkout master - to switch from working branch to local master branch
+2. git fetch -p origin – to fetch everything from the master branch on GitHub
+3. git merge origin/master to update your local master branch 
+4. git checkout branch name – to switch to your working branch 
+5. git merge master - to update your working branch  
+
+#### Deployment on Heroku
+
+1. cd project name
+2. Add Gem ‘pg.’ to production: do field in the Gemfile 
+3. Run bundle install – – without production 
+4. Create an account on Heroku 
+5. heroku login  
+6. heroku keys:add id_rsa.pub to add ssh keys to your account 
+7. heroku create – to create an application
+8. heroku apps:rename newname –app oldname (to rename your application)
+9. git config –list  | grep Heroku  (to verify that the remote was added to your project)
+10. git init to be access your repository
+11.	git add.
+12.	git commit -m “init”
+13.	git status – to check the status of the local master branch before deployment 
+14.	git push heroku master ( to push your local master branch to heroku)
+15.	heroku rake db:migrate – to migrate  database to heroku
+16.	heroku open – to open your application on heroku
+
+#### To import the data of the tables on Heroku you need to run the following 3 commands:
+1. heroku rake country:seed_search
+2. heroku rake location:seed_country 
+3. heroku rake search:seed_location
+
+
 
 
 **InfoFlood 2020 © Copyright**
