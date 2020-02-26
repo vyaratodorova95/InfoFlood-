@@ -1,4 +1,4 @@
-# README
+# README Sneha is awesome
 
 <h1>About the application:</h1>
 <p>This is a Ruby on Rails application based on an open source dataset based on a Global archive of Flood information found at ___
