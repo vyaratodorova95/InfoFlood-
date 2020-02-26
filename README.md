@@ -1,11 +1,12 @@
 # Global Flood information - InfoFlood :ocean::house:
 ###### *Developed by - @JoaoCruz20, @Sneha-Sabu, @vyaraodorova95*
 ### About the application:
-This is a Ruby on Rails application based on an open source dataset based on a Global archive of Flood information found at https://data.world/hdx/0cbe9bb4-edda-4ddf-b82f-c5a0f712c236.
-The spreadsheet needed to be imported into the application using a Parsing method explained in detail at https://github.com/scharlau/parsing which was a guiding tool to parse the CSV of the dataset. This application uses the rake command to import the dataset into the database since it can process large records of data at once. </p>
+This is a Ruby on Rails application based on an open source dataset representing a Global archive of Flood information found on https://data.world/hdx/0cbe9bb4-edda-4ddf-b82f-c5a0f712c236.
+The spreadsheet of the dataset needed to be imported into the application using a Parsing method explained in detail at https://github.com/scharlau/parsing which was a guiding tool to parse the CSV of the dataset. This application uses the rake command to import the dataset into the database since it can process large records of data at once. </p>
 
 ## Running application
-
+The live application has been deployed on Heroku and can be accessed through the following link:
+http://infoflood.herokuapp.com/
 
 ## System Requirements 
 #### This application has the following system dependencies:
@@ -27,35 +28,31 @@ gem 'spring-watcher-listen', '~> 2.0.0' | gem 'capybara', '>= 2.15'
 gem 'selenium-webdriver' | gem 'webdrivers'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] | gem 'pg', '1.1.4'
 
-#### Configuration 
-Following are the steps taken to create the application:
+#### Configuration and running the application
+Listed below are the requirements to configure the application: (All commands are as per how they are to be written in the terminal. If requested to add something to a folder it will be specificly written):
 1. Create a new application using the following command:
   rails new InfoFlood
-2. Create the scaffolds using the following commands:
-  rails generate controller InfoFlood index
-  rails generate scaffold Search long:decimal lat:decimal area:integer began:date ended:date dead:integer displaced:integer    maincause:string country:references
-  rails generate scaffold Location long:decimal lat:decimal area:integer country:references
-3.  
-Listed below are the requirements to configure the application: (All commands are as per how they are to be written in the terminal. If requested to add something to a folder it will be specificly written)
-
-* 
-* Before running rails server, it’s necessary on some systems (including the cloud IDE) to allow connections to the local web server. To enable this, you should navigate to the file config/environments/development.rb and paste in the two extra lines shown <br/>
-  #Allow connections to local server. <br/>
- config.hosts.clear </li>
-* Open infoflood/config/routes.rb in your editor. Stop the rails server if you have it running so that changes to the routes file take effect.
-* root 'infoflood/index' </li>
-  	<li>We can check that it works by switching to the other console, and then cd into the travelagent workspace if we’re not already there, and start the server with the command <br/>
-		rails server </li>
-        <li>Rails attempts to pluralize singular words while creating scaffolds. If you want to remove all pluralizations add the following code to the /config/initializers/inflections.rb file <br/>
+2. Rails attempts to pluralize singular words while creating scaffolds. If you want to remove all pluralizations add the following code to the /config/initializers/inflections.rb file <br/>
 ActiveSupport::Inflector.inflections do |inflect| <br/>
-  inflect.clear <br/>
+inflect.clear <br/>
 inflect.singular(/$/i, '') <br/>
-		end </li>
-	<li>rails generate scaffold country name </li>
-	<li>rails db:migrate</li>
-  	<li></li>
-	<li>rails db:migrate</li>
-	<li>Highcharts </li>
+end
+3. Create the scaffolds using the following commands:
+  * rails generate controller InfoFlood index
+  * rails generate scaffold Search long:decimal lat:decimal area:integer began:date ended:date dead:integer displaced:integer    maincause:string country:references
+  * rails generate scaffold Location long:decimal lat:decimal area:integer country:references
+4. Load the migration file into the database with the command:
+  * rails db:migrate
+5. Configure the application by editing the /config/routes.rb file by adding the following code below the get line: <br/>
+  * root 'info_flood#index'
+6. Display the required data using the relevant attribute names on the view files.
+7. Before running rails server, it’s necessary on some systems (including the cloud IDE) to allow connections to the local web server. To enable this, you should navigate to the file config/environments/development.rb and paste in the two extra lines shown <br/>
+  #Allow connections to local server. <br/>
+ config.hosts.clear
+8.Check that the application works by switching to the console and start the server with the command
+* rails server
+
+        	<li>Highcharts </li>
 	<li>yarn add highcharts </li>
 	<li>yarn add jquery</li>
 	<li>yarn add –check files</li>
