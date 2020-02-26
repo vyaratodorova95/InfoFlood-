@@ -1,0 +1,84 @@
+4416413	Sneha Sabu	Wed Feb 26 17:01:25 2020	Backup of the migration files
+c5cb1e2	Sneha Sabu	Wed Feb 26 17:00:47 2020	Backup of the migration files
+bc55ea1	Sneha Sabu	Wed Feb 26 15:08:45 2020	Readme file additions - Version 1
+1b3f81d	Sneha Sabu	Wed Feb 26 15:06:30 2020	Gemfile update with PG version
+e7c250e	João Cruz	Wed Feb 26 14:38:36 2020	Update README.md
+39e20f3	João Cruz	Wed Feb 26 14:34:45 2020	Merge pull request #25 from vyaraodorova95/Joao-branch
+5f629ac	JoaoCruz20	Wed Feb 26 14:33:03 2020	Update
+0b50fba	JoaoCruz20	Wed Feb 26 14:27:18 2020	Prints of the Website added
+b758360	Sneha Sabu	Wed Feb 26 13:59:21 2020	Final layout edits
+db73275	Sneha Sabu	Wed Feb 26 13:31:23 2020	Final CSS updates
+767305f	Sneha Sabu	Wed Feb 26 13:30:20 2020	CSS Updates Final
+b9b4016	Sneha Sabu	Wed Feb 26 12:03:00 2020	Update README.md
+2f0875b	Sneha Sabu	Wed Feb 26 11:03:28 2020	CSS Updates
+779eacd	Sneha Sabu	Wed Feb 26 00:48:12 2020	CSS and Layout Updates
+7bd4d1a	João Cruz	Wed Feb 26 00:02:19 2020	Update README.md
+42e643a	João Cruz	Wed Feb 26 00:01:11 2020	Update README.md
+a2da14e	João Cruz	Tue Feb 25 23:48:59 2020	Merge pull request #22 from vyaraodorova95/Vyara
+4e3550a	Vyara Todorova	Tue Feb 25 23:47:47 2020	Merge branch 'master' into Vyara
+2c88029	João Cruz	Tue Feb 25 23:47:23 2020	Merge pull request #23 from vyaraodorova95/Joao-branch
+a114e0e	JoaoCruz20	Tue Feb 25 23:46:07 2020	Final layout
+4a0a407	João Cruz	Tue Feb 25 23:34:07 2020	Update README.md
+f81babe	Sneha Sabu	Tue Feb 25 23:33:23 2020	Update
+fca31fc	Sneha Sabu	Tue Feb 25 23:30:18 2020	gemfile update
+ac7d270	João Cruz	Tue Feb 25 23:28:05 2020	Merge pull request #21 from vyaraodorova95/sneha
+3f6befa	Sneha Sabu	Tue Feb 25 23:25:41 2020	Json data display
+1e45993	João Cruz	Tue Feb 25 23:25:13 2020	Update README.md
+1947336	João Cruz	Tue Feb 25 14:59:09 2020	Merge pull request #20 from vyaraodorova95/Joao-branch
+5547307	JoaoCruz20	Tue Feb 25 14:56:14 2020	Update to everything/ it works/ its ALIVEgit add -Agit add -A
+048f0f5	JoaoCruz20	Tue Feb 25 00:29:04 2020	possible no pg
+43dac6b	João Cruz	Tue Feb 25 00:06:08 2020	Merge pull request #19 from vyaraodorova95/Joao-branch
+38a9d98	JoaoCruz20	Tue Feb 25 00:04:56 2020	pissble commits
+f6afcb4	João Cruz	Tue Feb 25 00:00:58 2020	Merge branch 'master' into Joao-branch
+9f40b6a	JoaoCruz20	Mon Feb 24 23:57:05 2020	layout before About page
+51d7484	JoaoCruz20	Mon Feb 24 23:32:30 2020	layouts update
+879e603	Vyara Todorova	Mon Feb 24 23:18:26 2020	update
+f0e3d4d	JoaoCruz20	Mon Feb 24 21:29:11 2020	update
+471d2ae	João Cruz	Mon Feb 24 21:19:24 2020	Merge pull request #17 from vyaraodorova95/Vyara
+b0a24dd	João Cruz	Mon Feb 24 21:18:23 2020	Merge pull request #18 from vyaraodorova95/sneha
+ea7798f	Sneha Sabu	Mon Feb 24 21:11:00 2020	Search page modifications of data being displayed
+f3b9a4b	Vyara Todorova	Mon Feb 24 19:29:47 2020	update Gemfile
+0e09058	Vyara Todorova	Mon Feb 24 19:14:10 2020	Gemfile update
+9ae954f	João Cruz	Mon Feb 24 18:48:32 2020	Merge pull request #16 from vyaraodorova95/sneha
+c2eb2dc	Sneha Sabu	Mon Feb 24 11:08:44 2020	Pagination gem addition and controller modification for the search page
+3395974	Vyara Todorova	Mon Feb 24 11:03:06 2020	Gemfile updated
+af7df31	Sneha Sabu	Mon Feb 24 10:08:55 2020	Updating branch
+b8122cb	João Cruz	Mon Feb 24 09:57:52 2020	Merge pull request #14 from vyaraodorova95/sneha
+26fed98	João Cruz	Mon Feb 24 09:57:28 2020	Merge branch 'master' into sneha
+fa6cab4	Sneha Sabu	Mon Feb 24 09:46:48 2020	Mapbox and model changes
+3b2b519	João Cruz	Sun Feb 23 19:23:58 2020	Merge pull request #13 from vyaraodorova95/Joao-branch
+0c9044d	JoaoCruz20	Sun Feb 23 19:19:25 2020	95%layout finished
+5ad3c0e	JoaoCruz20	Sun Feb 23 19:05:52 2020	Final First Day in layout
+9084581	JoaoCruz20	Sun Feb 23 14:56:33 2020	First update of Bootstrap and visual updates
+a3f2b3c	João Cruz	Sat Feb 22 17:17:58 2020	Merge pull request #12 from vyaraodorova95/Joao-branch
+02938fb	João Cruz	Sat Feb 22 17:17:48 2020	Merge branch 'master' into Joao-branch
+a2629bc	Sneha Sabu	Thu Feb 20 19:16:36 2020	Gemfile update
+1c221a5	Sneha Sabu	Thu Feb 20 19:00:49 2020	Gemfile update
+6cd13a4	Sneha Sabu	Thu Feb 20 18:58:12 2020	Gemfile update
+47d6983	JoaoCruz20	Thu Feb 20 18:24:25 2020	just a normal updat
+9389258	JoaoCruz20	Thu Feb 20 18:18:01 2020	gemfile sql putted as a comment
+c2ea19d	João Cruz	Thu Feb 20 18:15:45 2020	Merge pull request #11 from vyaraodorova95/sneha
+09a9e2a	Sneha Sabu	Thu Feb 20 18:11:06 2020	Highchart file additions
+416c0c8	Vyara Todorova	Thu Feb 20 17:00:39 2020	Merge pull request #10 from vyaraodorova95/Vyara
+806cf4d	Vyara Todorova	Thu Feb 20 16:21:04 2020	merge conflict
+7de0796	Vyara Todorova	Thu Feb 20 16:15:39 2020	previous update problem
+af47356	JoaoCruz20	Thu Feb 20 15:41:38 2020	merge update
+c19e98a	JoaoCruz20	Thu Feb 20 15:27:26 2020	no changes
+b5fb1fb	Vyara Todorova	Wed Feb 19 23:00:47 2020	Merge pull request #7 from vyaraodorova95/sneha
+31f6acd	Sneha Sabu	Wed Feb 19 22:42:04 2020	Gemfile without pg
+ed1a755	Sneha Sabu	Wed Feb 19 22:19:30 2020	Gemfile without pg
+16a4657	Sneha Sabu	Wed Feb 19 22:12:57 2020	Gemfile without pg
+ed7bd3b	Vyara Todorova	Wed Feb 19 21:56:36 2020	Merge pull request #6 from vyaraodorova95/sneha
+5358405	Sneha Sabu	Wed Feb 19 21:54:40 2020	Highcharts additions
+e247a7c	Vyara Todorova	Tue Feb 18 18:39:30 2020	Merge pull request #5 from vyaraodorova95/sneha
+7849619	Vyara Todorova	Tue Feb 18 18:39:11 2020	Merge branch 'master' into sneha
+744c4a3	Sneha Sabu	Tue Feb 18 18:34:52 2020	Parsing data of all three tables of the schema.
+1c20d1d	t17ss19	Tue Feb 18 17:45:24 2020	Merge pull request #4 from vyaraodorova95/Vyara
+a0a6554	Vyara Todorova	Tue Feb 18 16:55:55 2020	Gem pg installed
+64b29c2	João Cruz	Tue Feb 18 15:09:20 2020	Merge pull request #3 from vyaraodorova95/sneha
+a6af017	Sneha Sabu	Tue Feb 18 15:07:33 2020	rake file update with location and information
+b62411e	Vyara Todorova	Tue Feb 18 14:35:09 2020	Merge pull request #2 from vyaraodorova95/Joao-branch
+d9f8a19	JoaoCruz20	Tue Feb 18 14:24:35 2020	All gemfile changes except pg
+67ebc8c	JoaoCruz20	Tue Feb 18 14:12:39 2020	gemfile changes
+e3b5283	Vyara Todorova	Mon Feb 17 10:32:23 2020	first commit
+abb292c	Sneha Sabu	Sun Feb 16 17:27:33 2020	first commit
