@@ -3,7 +3,7 @@ class Search < ApplicationRecord
   
   def self.search(term)
     if term
-      where("country.name LIKE ?","%#{term}%")
+      WHERE("country.name::text LIKE ?","%#{term}%")
     else
       all
     end
