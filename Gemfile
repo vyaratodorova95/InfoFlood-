@@ -26,8 +26,6 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.4.1'
-gem 'will_paginate'
-gem 'pg' , '~> 1.1.4'
 
 
 # Use Active Storage variant
@@ -52,7 +50,7 @@ group :development do
 end
 
 group :production do
-gem 'pg', '~>  1.1.4'
+gem 'pg'  '~> 1.1.4'
 end
 
 group :test do
