@@ -44,7 +44,8 @@ ActiveRecord::Schema.define(version: 2020_02_23_173216) do
     t.index ["country_id"], name: "index_search_on_country_id"
   end
 
-  
   add_foreign_key "location", "country"
+  add_index "country_id", "location"
   add_foreign_key "search", "country"
+  add_index "country_id", "search"
 end
