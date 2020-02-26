@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.4.1'
 gem 'will_paginate'
+gem 'pg' , '~> 1.1.4'
 
 
 # Use Active Storage variant
