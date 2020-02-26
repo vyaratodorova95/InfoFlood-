@@ -76,24 +76,62 @@ inflect.singular(/$/i, '')
    17.	yarn add bootstrap jquery popper.js
 
 
-* Database creation
-  1. gem 'pg'
-  
+* Database creation (Commands only/Terminal)
+  1. gem 'pg'  
   2. rails generate scaffold country name
+  3. rails db:migrate
+  4.rails g task country seed_country
+  5.rails g task country seed_location
+  6.rails g task country seed_information
 
 * Database initialization
-  
-
-* How to run the test suite
+  1. rails db:migrate
+  2. rails server
 
 * Services (job queues, cache servers, search engines, etc.)
+    Highcharts
+    1.yarn add highcharts
+    2.yarn add jquery
+    3.yarn add –check files
+    
+    Bootstrap
+    1. yarn add bootstrap jquery popper.js
+    2. open config/webpack/environment.js and add:
+const { environment } = require('@rails/webpacker')
+const webpack = require('webpack')
+	environment.plugins.prepend('Provide',
+new webpack.ProvidePlugin({
+$: 'jquery/src/jquery',
+jQuery: 'jquery/src/jquery',
+Popper: ['popper.js', 'default']
+})
+
+   3. Go to app/javascript/packs/application.js and add:
+import "bootstrap"
+import "../stylesheets/application"
+document.addEventListener("turbolinks:load", () => {    
+    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').popover()
+})
+
+   4.create a directory in app/javascript called stylesheets and add a stylesheet called application.scss. Then open the file and add:
+@import "~bootstrap/scss/bootstrap";
+
+   5. check layout view if it contains this link:
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+Then add above it:
+<%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 
 * Deployment instructions
 
 * Implementation
 
 * Copyright
+InfoFlood 2020 © Copyright Trademark
 
 * License
+Use at your own parial
 
 * Terms and Agreement
+Under Terms and Agreemments of University of Aberdeen and Software distrubution
