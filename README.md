@@ -75,7 +75,6 @@ inflect.singular(/$/i, '')
    16.	add gem 'will_paginate'
    17.	yarn add bootstrap jquery popper.js
 
-
 * Database creation (Commands only/Terminal)
   1. gem 'pg'  
   2. rails generate scaffold country name
@@ -89,12 +88,15 @@ inflect.singular(/$/i, '')
   2. rails server
 
 * Services (job queues, cache servers, search engines, etc.)
+
     Highcharts
+    
     1.yarn add highcharts
     2.yarn add jquery
     3.yarn add –check files
     
     Bootstrap
+    
     1. yarn add bootstrap jquery popper.js
     2. open config/webpack/environment.js and add:
 const { environment } = require('@rails/webpacker')
@@ -122,16 +124,18 @@ document.addEventListener("turbolinks:load", () => {
 Then add above it:
 <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-
 * Deployment instructions
 
 * Implementation
 
 * Copyright
+
 InfoFlood 2020 © Copyright Trademark
 
 * License
+
 Use at your own parial
 
 * Terms and Agreement
+
 Under Terms and Agreemments of University of Aberdeen and Software distrubution
