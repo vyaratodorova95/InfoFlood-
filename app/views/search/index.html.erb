@@ -30,12 +30,12 @@
         <td><%= search.country.name %></td>
         <td><%= search.maincause %></td>
         <td><%= link_to 'Show', search %></td>
-        <td></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Display Country data', jsondata_index_path %>
+
 <br>
 <hr>
 
@@ -43,5 +43,5 @@
 
 
 <li class="nav-item">
-        <a type="button" class="btn btn-outline-primary" style="margin-left:45%;"<%= link_to 'New Search', new_search_path %></a>
+        <a type="button" class="btn btn-outline-primary" style="margin-left:45%;"<%= link_to 'Display Country data', jsondata_index_path %></a>
 </li>

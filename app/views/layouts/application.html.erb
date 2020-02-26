@@ -8,16 +8,18 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/48781063de.js"></script>
   </head>
 
   <body>
     
-   <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+   <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd; text-align: center;">
    
    
   <%= image_tag("Logo2.jpg", {:style => "width:120px; height:120px; margin-right:15px;"}) %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <i class="fa fa-bars" aria-hidden="true" style= "font-size: 30px;"></i>
+
   </button>
       
  <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,39 +50,31 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+             <a><%=link_to 'Home', info_flood_index_path %></a>
             </li>
             <li class="list-inline-item">⋅</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+             <a><%=link_to 'Summary', location_index_path  %></a>
             </li>
             <li class="list-inline-item">⋅</li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a><%=link_to 'Search', search_index_path  %></a>
             </li>
             <li class="list-inline-item">⋅</li>
-            <li class="list-inline-item">
-              <a href="#">Privacy Policy aka Joao rules</a>
-            </li>
+            
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">© Info Flood 2020. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0">© InfoFlood 2020. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
             <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-facebook fa-2x fa-fw"></i>
-              </a>
+                <i class="fa fa-home" aria-hidden="true"></i>
             </li>
             <li class="list-inline-item mr-3">
-              <a href="#">
-                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-              </a>
-            </li>
+                <i class="fa fa-info" aria-hidden="true"></i>
+           </li>
             <li class="list-inline-item">
-              <a href="#">
-                <i class="fab fa-instagram fa-2x fa-fw"></i>
-              </a>
+                <i class="fa fa-search" aria-hidden="true"></i>
             </li>
           </ul>
         </div>
