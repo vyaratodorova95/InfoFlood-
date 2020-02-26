@@ -70,38 +70,36 @@ Run the following three commands one by one to import data into each table:
 * rails g task country seed_search
 
 #### Maps
+This application uses Mapbox with Leaflet for displaying locations of each recorded Flood.
 
-    
-    Bootstrap
-    *yarn add bootstrap
-    1. yarn add bootstrap jquery popper.js
-    2. open config/webpack/environment.js and add:
-const { environment } = require('@rails/webpacker')
-const webpack = require('webpack')
-	environment.plugins.prepend('Provide',
-new webpack.ProvidePlugin({
-$: 'jquery/src/jquery',
-jQuery: 'jquery/src/jquery',
-Popper: ['popper.js', 'default']
+#### Layout and Bootstrap integration
+The following steps have to be taken in order to integrate Bootstrap into the layout of the application:
+* yarn add bootstrap
+* yarn add bootstrap jquery popper.js
+* Open config/webpack/environment.js and add:\
+const { environment } = require('@rails/webpacker')\
+const webpack = require('webpack')\
+environment.plugins.prepend('Provide',\
+new webpack.ProvidePlugin({\
+$: 'jquery/src/jquery',\
+jQuery: 'jquery/src/jquery',\
+Popper: ['popper.js', 'default']\
 })
-
-   3. Go to app/javascript/packs/application.js and add:
-import "bootstrap"
-import "../stylesheets/application"
+* Go to app/javascript/packs/application.js and add:\
+import "bootstrap"\
+import "../stylesheets/application"\
 document.addEventListener("turbolinks:load", () => {    
-    $('[data-toggle="tooltip"]').tooltip()
-    $('[data-toggle="tooltip"]').popover()
+    $('[data-toggle="tooltip"]').tooltip()\
+    $('[data-toggle="tooltip"]').popover()\
 })
-
-   4.create a directory in app/javascript called stylesheets and add a stylesheet called application.scss. Then open the file and add:
+* Create a directory in app/javascript called stylesheets and add a stylesheet called application.scss. Then open the file and add:\
 @import "~bootstrap/scss/bootstrap";
-
-   5. check layout view if it contains this link:
+* Check layout view if it contains this link:\
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-Then add above it:
+Then add above it:\
 <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-* Deployment instructions
+#### Deployment instructions
 
 * Implementation
 
