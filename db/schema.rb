@@ -18,18 +18,6 @@ ActiveRecord::Schema.define(version: 2020_02_23_173216) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "information", force: :cascade do |t|
-    t.date "began"
-    t.date "ended"
-    t.string "validation"
-    t.integer "dead"
-    t.integer "displaced"
-    t.string "maincause"
-    t.integer "country_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["country_id"], name: "index_information_on_country_id"
-  end
 
   create_table "location", force: :cascade do |t|
     t.decimal "long"
@@ -56,7 +44,6 @@ ActiveRecord::Schema.define(version: 2020_02_23_173216) do
     t.index ["country_id"], name: "index_search_on_country_id"
   end
 
-  add_foreign_key "information", "country"
   add_foreign_key "location", "country"
   add_foreign_key "search", "country"
 end
