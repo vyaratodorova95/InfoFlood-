@@ -49,45 +49,31 @@ end
 7. Before running rails server, it’s necessary on some systems (including the cloud IDE) to allow connections to the local web server. To enable this, you should navigate to the file config/environments/development.rb and paste in the two extra lines shown <br/>
   #Allow connections to local server. <br/>
  config.hosts.clear
-8.Check that the application works by switching to the console and start the server with the command
+8. Check that the application works by switching to the console and start the server with the command
 * rails server
 
-        	<li>Highcharts </li>
-	<li>yarn add highcharts </li>
-	<li>yarn add jquery</li>
-	<li>yarn add –check files</li>
-	<li>rails g task country seed_country</li>
-	<li>rails g task country seed_location</li>
-	<li>rails g task country seed_information</li>
-	<li>yarn add bootstrap</li>
-	<li>add gem 'will_paginate' </li>
-	<li>yarn add bootstrap jquery popper.js</li> </ul>
+ #### Charts
+ * Highcharts are used for generating interactive charts and graphs representing the Top 5 most affected and Top 10 least flood affected countries on the Statistics page of the application to provide the user with an insight based on the cumulative dataset. The charts have been generated following the instructions at the bottom of the page on https://homepages.abdn.ac.uk/b.scharlau/pages/practical-three-adding-models-to-the-travel-agent/. The charts displayed accurate counts of total number of floods recorded per country on github, however due to the database being different on Heroku faced some compatibility issues in terms of accurate counts.\
+Following steps are to be taken to install and run the highcharts on the application:
+* yarn add highcharts
+* yarn add jquery
+* yarn add –check files
 
-<h4> Database creation (Commands only/Terminal) </h4>
-  <ul>
-	<li>gem 'pg'  </li>
-	<li>rails generate scaffold country name </li>
-	<li>rails generate scaffold Search long:decimal lat:decimal area:integer began:date ended:date dead:integer displaced:integer maincause:string country:references </li>
-	<li>rails db:migrate </li>
-	<li>rails g task country seed_country</li>
-	<li>rails g task country seed_location</li>
-	<li>rails g task country seed_information</li>
-	
+#### Dataset importing with Rake file
+To start developing the application in order to display the data the following steps have to be taken:
+* rails g task country seed_country
+* Running the above command will create a file under lib/tasks/country.rake which can be modified by specifying tasks and details of each database table and the column names to be inserted in each table from the excel.
 
-* Database initialization
-  1. rails db:migrate
-  2. rails server
+Run the following three commands one by one to import data into each table:
+* rails g task country seed_country
+* rails g task country seed_location
+* rails g task country seed_search
 
-* Services (job queues, cache servers, search engines, etc.)
+#### Maps
 
-    Highcharts
-    
-    1.yarn add highcharts
-    2.yarn add jquery
-    3.yarn add –check files
     
     Bootstrap
-    
+    *yarn add bootstrap
     1. yarn add bootstrap jquery popper.js
     2. open config/webpack/environment.js and add:
 const { environment } = require('@rails/webpacker')
@@ -124,9 +110,5 @@ Then add above it:
 InfoFlood 2020 © Copyright Trademark
 
 * License
-
-Use at your own parial
-
-* Terms and Agreement
 
 Under Terms and Agreemments of University of Aberdeen and Software distrubution
