@@ -99,14 +99,41 @@ document.addEventListener("turbolinks:load", () => {
 Then add above it:\
 <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+
+#### Application pages - Layouts
+ 
+1.	This is our homepage background photo
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print1.png)
+
+2. Photo displaying the impact of floods
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print2.png)
+ 
+3. A video documenting the impact of floods in Kerala, India
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print3.png)
+ 
+4. A bar graph which displays 20 countries and the number of places within them affected by floods.\
+**Comment: Prior to deploying our application on Heroku, on our Github master branch the following bar graph displayed accurate individual counts of floods in each country. Following the deployment of our application to Heroku, we have encountered a compatability issue with displaying the accurate total counts of floods within the bar graph.**
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print4.png)
+
+5. The first pie chart shown displays the countries with the highest number of floods and the second one shows top 10 counries least affected by floods.
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print5.png)
+
+6. Our search page includes a chronological information of floods around the world and there is a search bar which enables users to find more information about flood events by country.\ 
+**Comments: Prior to deploying our application to Heroku, on our Github master branch the search functionality returned query results of keyword search (countries). Following the deployment of our application to Heroku, we have encountered an issue with the functionality of the search bar displaying the query results.** 
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print6.png)
+
+ 
+7. This is a map which displays the location of a flood along with the start and end date, number of deaths and cause of the event.
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print7.png)
+
+8. This is a page that returns the country specific flood details of each location as a JSON format.
+![Homepage](https://github.com/vyaraodorova95/InfoFlood-/blob/master/app/assets/images/Print8.png)
+
+
+
 #### Deployment instructions
 
-* Implementation
 
-* Copyright
 
-InfoFlood 2020 © Copyright Trademark
-
-* License
-
-Under Terms and Agreemments of University of Aberdeen and Software distrubution
+*InfoFlood 2020 © Copyright*
+*Under Terms and Agreemments of University of Aberdeen and Software distrubution*
